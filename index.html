@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyPoint</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di HealthyPoint</h1>
+        <button id="exitButton" onclick="exitWebsite()">X</button>
+    </header>
+
+    <div id="tabs">
+        <button onclick="showTab('fisik')">Fisik</button>
+        <button onclick="showTab('mental')">Mental</button>
+        <button onclick="showTab('event')">Event</button>
+    </div>
+
+    <div id="content">
+        <div id="fisikTab" class="tabContent">
+            <h2>Isi Biodata Anda</h2>
+            <form id="biodataForm">
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+
+                <label for="weight">Berat Badan (kg):</label><br>
+                <input type="number" id="weight" name="weight"><br><br>
+
+                <label for="height">Tinggi Badan (cm):</label><br>
+                <input type="number" id="height" name="height"><br><br>
+
+                <button type="button" onclick="calculateBMI()">Hitung BMI & BMR</button>
+            </form>
+            <div id="result"></div>
+        </div>
+
+        <div id="mentalTab" class="tabContent">
+            <h2>Tugas Mental</h2>
+            <p>Isi tugas mental yang harus dilakukan.</p>
+        </div>
+
+        <div id="eventTab" class="tabContent">
+            <h2>Tugas Harian</h2>
+            <button onclick="showMission()">Tampilkan Tugas</button>
+            <div id="mission"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Website Kesehatan</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
